@@ -23,7 +23,7 @@ Notifications of some back-end services come only by e-mail (for example: accoun
 ## First Run
 
 * In order for the tool to work, you must first allow your gmail account.
-* After putting * cretentials.js in the same directory as gstp. Issue the ./gstp command through the terminal. It will give you a URL address.
+* After putting credential.json file in the same directory as gstp. Issue the ./gstp command through the terminal. It will give you a URL address.
 * Open this URL from your browser and continue with your gmail account.
 * After giving the necessary permissions, it will give you an authorisation code.
 * After entering this code in the relevant field, your token.js file will be created.
