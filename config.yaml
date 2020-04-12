@@ -1,4 +1,3 @@
-#query https://support.google.com/mail/answer/7190?hl=en
 query: in:inbox is:unread newer_than:1d
 userid: me
 credential: ./credential.json

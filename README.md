@@ -9,13 +9,24 @@ Notifications of some back-end services come only by e-mail (for example: accoun
 ## Obtaining OAuth2 Credentials
 
 * Go to the Google Developers API Console: https://console.developers.google.com/apis/credentials
-* Create Credentials -> OAuth Client ID ** Application Type: Other
-* Click the "down arrow" icon to download your credentials file - client_secret___.json.
-* Create a OAuth 2 Consent screen with whatever name and icon you like. The scopes needed are;
+* Click to "Create Credentials" button
+* Select "Create OAuth client ID"
+* Check "Other" 
+* Enter your client name and click create button
+* You can see in the "OAuth 2.0 Client IDs" your client. Download it.
+* Copy to in gstp binary directory
 
 ## Installation
 
 * Download
+
+## First Run
+
+* In order for the tool to work, you must first allow your gmail account.
+* After putting * cretentials.js in the same directory as gstp. Issue the ./gstp command through the terminal. It will give you a URL address.
+* Open this URL from your browser and continue with your gmail account.
+* After giving the necessary permissions, it will give you an authorisation code.
+* After entering this code in the relevant field, your token.js file will be created.
 
 ## Configuration
 
