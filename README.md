@@ -53,14 +53,18 @@ filters:
     subject_regex: .+MySQL Daily Full Backup.+
     label: mysql_backup
   - filter:
-    subject_regex: .+From CEO.+
+    subject_regex: .+CEO Here.+
     label: ceo_in_the_building
 ```
 
 ## Example prometheus Metrics
 
 ```sh
-gstp_counter
+# HELP gstp_counter subject count of filtered email message
+# TYPE gstp_counter counter
+gstp_counter{subject="socradar_incidend"} 5
+gstp_counter{subject="mysql_backup"} 18
+gstp_counter{subject="ceo_in_the_building"} 0
 ```
 ## Running tests
 
