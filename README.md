@@ -18,7 +18,12 @@ Notifications of some back-end services come only by e-mail (for example: accoun
 
 ## Installation
 
-* Download
+* Download binary in your server
+  * OSX https://github.com/c1982/gstp/releases/download/v1.0/gstp-darwin
+  * Linux https://github.com/c1982/gstp/releases/download/v1.0/gstp-linux
+* Obtain credential.json
+* Edit filters in config.yaml
+* Run and enter authorisation token
 
 ## First Run
 
