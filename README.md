@@ -38,8 +38,8 @@ webpath: /metrics
 #Default prometheus exporter http port.
 port: :8080
 
-#Interval of email check
-check_interval: 1m
+#Interval of email check. Default: 5m (5 minutes) Syntax: 1m, 1h, 1d, 30m
+check_interval: 5m
 
 #Filter rules of email subjects.
 filters:
@@ -83,6 +83,21 @@ docker build -t gstp:latest .
 ```
 
 ##### run docker
+
 ```sh
 docker run -d -rm -p 8080:8080 gstp
+```
+
+## Daemon
+
+for debian:
+
+```sh
+mkdir -p /opt/gstp
+cp gstp config.yaml /opt/gstp
+chmod +x /opt/gstp/gstp
+cp gstp.services /etc/systemd/system/gstp.service
+systemctl enable gstp
+systemctl start gstp
+systemctl status gstp
 ```

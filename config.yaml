@@ -5,7 +5,7 @@ credential: ./credential.json
 token: ./token.json
 webpath: /metrics
 port: :8080
-check_interval: 1m
+check_interval: 5m
 filters:
   - filter:
     subject_regex: ^\[SOCRadar Incident\].+

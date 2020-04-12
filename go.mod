@@ -1,4 +1,4 @@
-module pge
+module gstp
 
 go 1.14
 
