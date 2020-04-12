@@ -1,0 +1,15 @@
+#query https://support.google.com/mail/answer/7190?hl=en
+query: in:inbox is:unread newer_than:1d
+userid: me
+credential: ./credential.json
+token: ./token.json
+webpath: /metrics
+port: :8080
+check_interval: 1m
+filters:
+  - filter:
+    subject_regex: ^\[SOCRadar Incident\].+
+    label: socradar_incidend
+  - filter:
+    subject_regex: .+MySQL Daily Full Backup.+
+    label: mysql_backup
