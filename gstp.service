@@ -1,0 +1,15 @@
+[Unit]
+Description=Gmail Subject Tracker of Prometheus Service
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+ExecStart=/opt/gstp/gstp
+LimitNOFILE=131072
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=gstp
+WorkingDirectory=/opt/gstp
+
+[Install]
+WantedBy=multi-user.target
