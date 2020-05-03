@@ -74,7 +74,7 @@ func setUpToken(config *oauth2.Config, tokenPath string) {
 	fmt.Println("3. Enter the authorisation code:")
 
 	if _, err := fmt.Scan(&code); err != nil {
-		log.Fatalf("Failed to read authorisation code: %v.", err)
+		log.Printf("Failed to read authorisation code: %v\n", err)
 	}
 
 	fmt.Println()
