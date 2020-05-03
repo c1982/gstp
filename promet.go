@@ -40,7 +40,7 @@ func run(svc *GmailService, cfg *GstpConfig) {
 
 func watchFilters(srv *GmailService, config *GstpConfig) {
 	go func(svc *GmailService, cfg *GstpConfig) {
-		for _ = range time.Tick(cfg.CheckInterval) {
+		for range time.Tick(cfg.CheckInterval) {
 			subjects, err := svc.ReadSubjects(cfg.UserID)
 			if err != nil {
 				log.Fatal(err)

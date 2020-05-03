@@ -81,16 +81,16 @@ func setUpToken(config *oauth2.Config, tokenPath string) {
 
 	token, err := config.Exchange(context.Background(), code)
 	if err != nil {
-		log.Fatalf("Failed to exchange authorisation code for token: %v.", err)
+		log.Printf("Failed to exchange authorisation code for token: %v\n", err)
 	}
 
 	tokenFile, err := os.OpenFile(tokenPath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
-		log.Fatalf("Failed to open token file for writing: %v.", err)
+		log.Printf("Failed to open token file for writing: %v\n", err)
 	}
 
 	defer tokenFile.Close()
 	if err := json.NewEncoder(tokenFile).Encode(token); err != nil {
-		log.Fatalf("Failed to write token: %v.", err)
+		log.Printf("Failed to write token: %v\n", err)
 	}
 }

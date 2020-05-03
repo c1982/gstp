@@ -57,7 +57,7 @@ func NewGmailService(credentialfile, tokenfile, query string) (srv *GmailService
 	}
 
 	client := cfg.Client(context.Background(), &token)
-	service, err := gmail.New(client)
+	service, err := gmail.NewService(client)
 	if err != nil {
 		return srv, err
 	}
